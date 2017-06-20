@@ -1,0 +1,32 @@
+
+<div class="panel panel-info">
+<div class="panel-heading">Create User</div>
+
+<div class="panel-body">
+
+
+
+<div class="form-group {{unless isFullNameValid 'has-error'}}">
+  <label for="full-name" class="required text-primary" title="This field is requeired">Full name</label>
+  {{input type="text" value=userfullName class="form-control" id="full-name" placeholder="Full name"}}
+  {{#unless isFullNameValid}}
+    <span class="help-block">Full name is required</span>
+  {{/unless}}
+</div>
+
+<div class="form-group {{unless isPhoneValid 'has-error'}}">
+  <label for="phone" class="required text-primary" title="This field is requeired">Phone</label>
+  {{input type="text" value=userphone class="form-control" id="phone" placeholder="Phone number"}}
+
+  {{#unless isPhoneValid}}
+    <span class="help-block">Phone number is required</span>
+  {{/unless}}
+</div>
+
+<br>
+
+<button {{action "saveByAjax" userfullName userphone}} class="btn btn-primary">Save</button>
+<button {{action 'goBackShowUsersPage' }}class="btn btn-danger" type="submit">Back</button>
+
+</div>
+</div>

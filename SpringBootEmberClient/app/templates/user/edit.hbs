@@ -1,0 +1,40 @@
+
+<div class="panel panel-warning">
+<div class="panel-heading">Show Customer</div>
+
+<div class="panel-body">
+
+<h3 class="text-info">Edit User ID {{modelFromController.id}}</h3>
+
+<br>
+
+<div class="text-danger">
+  <form>
+        <table>
+          <tr>
+            <td align="right">Full Name:&nbsp;&nbsp;</td>
+            <td align="left">{{input autoclose=true value=fullNameInput placeholder=modelFromController.fullName}}</td>
+          </tr>
+          <tr>
+            <td align="left">Phone:&nbsp;&nbsp;</td>
+            <td align="left">{{input value=phoneInput placeholder=modelFromController.phone}}</td>
+          </tr>
+        </table>
+
+  </form>
+
+  <br>
+  <br>
+
+   
+    <div class = "save-edit-btn-task">
+      <button {{action 'saveEdit' model fullNameInput phoneInput}}class="btn btn-primary" type="submit">Save</button>
+      <button {{action 'closeEdit' model.id }}class="btn btn-danger" type="submit">Back</button>
+    </div>
+
+</div>
+
+</div>
+
+</div>
+

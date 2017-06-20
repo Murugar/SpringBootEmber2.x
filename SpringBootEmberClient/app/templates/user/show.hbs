@@ -1,0 +1,19 @@
+
+<div class="panel panel-info">
+<div class="panel-heading">Show Customer</div>
+
+<div class="panel-body">
+
+<h2 class="text-danger" >Id: <span class="text-primary"> {{model.id}} </span></h2>
+<h3 class="text-danger">FullName: <span class="text-primary">{{model.fullName}} </span></h3>
+<h3 class="text-danger">Phone: <span class="text-primary">{{model.phone}}</span></h3>
+
+<br/>
+<br/>
+
+<button {{action 'goBackToIndexAction' }}class="btn btn-primary" type="submit">Back</button>
+<button {{action 'goToEditUserAction' model.id}}class="btn btn-success" type="submit">Edit User</button>
+<button {{action 'deleteUserAction' model.id}}class="btn btn-danger" type="submit">Delete User</button>
+
+</div>
+</div>

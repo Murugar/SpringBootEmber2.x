@@ -1,0 +1,19 @@
+<h3 class="text-warning">List Of Available Users:</h3>
+
+<br/>
+
+<div class="list-group">
+  {{#each model as |user|}}
+    <li class="list-group-item list-group-item-success">
+      {{#link-to "user.show" user.id}}
+        {{user.fullName}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+</div>
+
+<br>
+
+<div class="group-show-users-btn">
+  <button {{action 'goToCreateUserPage' }}class="btn btn-success" type="submit">Create User</button>
+</div>
